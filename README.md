@@ -11,7 +11,6 @@ The public repository avoids internal exploratory numbering in file and folder n
 - `experiments/`: runnable experiment scripts.
 - `results/summaries/`: compact CSV/JSON summary outputs used for verification and manuscript tables.
 - `results/generated/`: outputs regenerated locally by running the experiments.
-- `results/raw/`: raw outputs when computationally feasible to include.
 - `src/lim/`: reusable LIM utilities.
 - `scripts/`: helper scripts for inspecting outputs.
 - `tests/`: minimal smoke tests.
