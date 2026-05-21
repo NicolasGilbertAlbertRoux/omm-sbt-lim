@@ -1,0 +1,62 @@
+# OMM--SBT--LIM Reproducibility Repository
+
+Repository target: <https://github.com/NicolasGilbertAlbertRoux/omm-sbt-lim.git>
+
+This repository contains the reproducibility package for the Latent Identity Model (LIM) study within the Oscillatory Mantle Model -- Substantial Beating Theory (OMM--SBT) framework.
+
+The public repository avoids internal exploratory numbering in file and folder names. Experiments are named by their scientific role.
+
+## Repository structure
+
+- `experiments/`: runnable experiment scripts.
+- `results/summaries/`: compact CSV/JSON summary outputs used for verification and manuscript tables.
+- `results/raw/`: raw outputs when computationally feasible to include.
+- `src/lim/`: reusable LIM utilities.
+- `scripts/`: helper scripts for inspecting outputs.
+- `tests/`: minimal smoke tests.
+- `docs/`: reproducibility notes.
+
+## Included formal experiments
+
+- `experiments/preliminary_memory_necessity_anticheat.py`
+- `experiments/observable_alias_memory_necessity.py`
+- `experiments/strict_double_blind_memory_necessity.py`
+- `experiments/latent_memory_calibration_scan.py`
+
+## Install
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+## Inspect included outputs
+
+```bash
+python scripts/inspect_available_results.py
+```
+
+## Run tests
+
+```bash
+pytest
+```
+
+## Run an experiment
+
+Example:
+
+```bash
+python experiments/strict_double_blind_memory_necessity.py
+```
+
+Generated outputs are written under `results/generated/`.
+
+## Scientific scope
+
+This repository supports independent verification, auditability, and falsification of the computational claims. The demonstrated claim is functional: under strict observable aliasing and anti-cheat controls, observable-only reconstruction collapses to chance, while coherent latent memory restores reconstruction. The repository does not assert metaphysical, religious, or supernatural claims.
+
+## License
+
+MIT License. See `LICENSE`.
