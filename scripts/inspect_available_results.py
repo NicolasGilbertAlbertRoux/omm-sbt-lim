@@ -8,6 +8,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 SUMMARY_ROOT = ROOT / "results" / "summaries"
 RAW_ROOT = ROOT / "results" / "raw"
+GENERATED_ROOT = ROOT / "results" / "generated"
 
 
 def describe_csv(path: Path) -> None:
@@ -22,17 +23,29 @@ def describe_json(path: Path) -> None:
     print(f"- {path.relative_to(ROOT)}: JSON keys: {', '.join(keys[:12])}{' ...' if len(keys) > 12 else ''}")
 
 
-def main() -> None:
-    print("Available summary outputs:\n")
-    for path in sorted(SUMMARY_ROOT.rglob("*")):
+def inspect_tree(title: str, root: Path) -> None:
+    print(f"\n{title}:\n")
+    if not root.exists():
+        print(f"- {root.relative_to(ROOT)}: not present")
+        return
+
+    found = False
+    for path in sorted(root.rglob("*")):
         if path.suffix == ".csv":
             describe_csv(path)
+            found = True
         elif path.suffix == ".json":
             describe_json(path)
+            found = True
 
-    print("\nAvailable raw outputs:\n")
-    for path in sorted(RAW_ROOT.rglob("*.csv")):
-        describe_csv(path)
+    if not found:
+        print("- no CSV/JSON files found")
+
+
+def main() -> None:
+    inspect_tree("Available summary outputs", SUMMARY_ROOT)
+    inspect_tree("Available raw outputs", RAW_ROOT)
+    inspect_tree("Available generated outputs", GENERATED_ROOT)
 
 
 if __name__ == "__main__":
