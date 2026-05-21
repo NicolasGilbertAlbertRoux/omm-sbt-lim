@@ -1,0 +1,16 @@
+{
+  "coherent_calibrated_recovery": 0.8811126373626373,
+  "coherent_memory_only_recovery": 1.0,
+  "coherent_no_arbiter_recovery": 0.6823183760683761,
+  "destroyed_calibrated_recovery": 0.025885225885225887,
+  "wrong_calibrated_recovery": 0.01849053724053724,
+  "shuffled_calibrated_recovery": 0.01913156288156288,
+  "adversarial_calibrated_recovery": 0.7079594017094017,
+  "gain_over_destroyed": 0.8552274114774114,
+  "gain_over_wrong": 0.8626221001221,
+  "gain_over_shuffled": 0.8619810744810744,
+  "gain_over_adversarial": 0.1731532356532356,
+  "arbiter_necessity_gain": 0.19879426129426125,
+  "memory_vector_calibrable": false,
+  "arbiter_contributes_to_calibration": true
+}

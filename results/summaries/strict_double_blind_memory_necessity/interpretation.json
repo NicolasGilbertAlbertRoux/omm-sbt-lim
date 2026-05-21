@@ -1,0 +1,21 @@
+{
+  "chance": 0.125,
+  "observable_only_recovery": 0.12497329711914062,
+  "speed_only_no_memory_recovery": 0.12509663899739584,
+  "coherent_memory_bounded_recovery": 1.0,
+  "coherent_memory_only_recovery": 1.0,
+  "destroyed_memory_recovery": 0.1269353230794271,
+  "wrong_memory_recovery": 0.0,
+  "adversarial_memory_recovery": 0.0,
+  "shuffled_memory_recovery": 0.12726338704427084,
+  "memory_swap_recovery": 0.12471516927083333,
+  "shuffled_label_recovery": 0.12066650390625,
+  "shuffled_label_false_positive": 1.0,
+  "anti_cheat_observable_pass": true,
+  "anti_cheat_speed_pass": true,
+  "coherent_memory_success": true,
+  "wrong_memory_collapse": true,
+  "destroyed_memory_collapse": true,
+  "shuffled_label_pass": true,
+  "strict_memory_necessity_supported": true
+}
